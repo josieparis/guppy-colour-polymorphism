@@ -14,5 +14,19 @@ Please refer to the file `sample_metadata.txt` for more information on read name
 ## SNP calling
 SNP calling was performed using the pipeline described here: https://github.com/josieparis/gatk-snp-calling
 
+## Colour phenotype analysis
+Colormesh can be found here: https://github.com/J0vid/Colormesh
+Publication with example data can be found here on bioRxiv: doi: https://doi.org/10.1101/2020.07.17.205369
+
+## R script for performing DAPC and fish image DAPC loading heatmaps:
+### This script also creates the components for Figure 1 and Supplementary Figure 1
+01_DAPC_heatmaps.R
+
+## R script for performing and plotting phenotype data PCAs:
+### This script also creates the components for Supplementary Figure 2
+02_phenotype_data_PCA_plots.R
+
+## 
+
 
 
