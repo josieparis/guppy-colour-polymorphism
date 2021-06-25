@@ -18,15 +18,55 @@ SNP calling was performed using the pipeline described here: https://github.com/
 Colormesh can be found here: https://github.com/J0vid/Colormesh
 Publication with example data can be found here on bioRxiv: doi: https://doi.org/10.1101/2020.07.17.205369
 
-## R script for performing DAPC and fish image DAPC loading heatmaps:
-### This script also creates the components for Figure 1 and Supplementary Figure 1
+##### NB these analyses and scripts were performed and written by Mitchel Daniel
+
+### R script for performing DAPC and fish image DAPC loading heatmaps:
+#### This script also creates the components for Figure 1 and Supplementary Figure 1
 01_DAPC_heatmaps.R
 
-## R script for performing and plotting phenotype data PCAs:
-### This script also creates the components for Supplementary Figure 2
+### R script for plotting phenotype data PCAs:
+#### This script also creates the components for Supplementary Figure 2
 02_phenotype_data_PCA_plots.R
 
-## 
+## R script for performing phenotype data permutations
+#### This script also creates the components for Supplementary Figure 3
+03_phenotype_perm.R
+
+## LG12 coordinate liftover
+The LG12 coordinates were lifted over from the genome available in Fraser et al 2020 GBE (https://doi.org/10.1093/gbe/evaa187) to add additional contigs placed by Deborah Charlesworth's genetic maps:
+
+The function for liftover of chr12 coordinates is:
+update_chr12_liftover.R
+
+The updates to the files are run in an R script (and bash to sort the vcf files afterwards)
+
+chr12_liftover.R
+
+## Poolfstat to calculate FST and allele frequencies:
+Poolfstat is available here: https://cran.r-project.org/web/packages/poolfstat/index.html 
+
+Script to calculate pairwise FST and allele freqs using poolfstat:
+poolfstat_FST_AFs.R
+
+## R script for perfoming Z_FST_PCA anlaysis and figures:
+#### This script also creates figure components for Figure 2a,b and d and Supplementary Figures 4,6 and 8
+Z_FST_PCA_analysis.R
+
+## R script for pairwise FST:
+#### This script also creates figure components for Supplementary Figures 5 and 7
+raw_pairwise_fst.R
+
+## R script for performing Z_pi_PCA analysis and figures:
+### This script also creates figure components for Supplementary Figures 9 & 11
+To calculate pi in 10kb windows we use a custom function (written by Jim Whiting)
+pool_pi.R
+
+To run the function and create the figures:
+
+
+
+
+
 
 
 
