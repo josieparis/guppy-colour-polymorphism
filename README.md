@@ -94,9 +94,12 @@ lostruct_localPCA.R
 #### This script creates figure components for Figure 4c,g,d & h
 popgenome_nat_data.R
 
+### Scripts for creating inter-chrom LD can be found here:
+https://github.com/josieparis/interchromLD
+
 ### Scripts for creating a genotype plot and haplotype plot as per Figure 5 can be found here:
 https://github.com/josieparis/genotype_plot
 
-### Scripts for creating inter-chrom LD can be found here:
-https://github.com/josieparis/interchromLD
+### R Script for performing GO enrichment and KEGG mapping:
+GO_KEGG_analysis_LG1.R
 
