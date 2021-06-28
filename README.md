@@ -71,7 +71,7 @@ CPD_analysis.R
 raw_pairwise_fst.R
 
 ### R script for performing Z_pi_PCA analysis and figures:
-### This script also creates figure components for Supplementary Figures 9 & 11
+#### This script also creates figure components for Supplementary Figures 9 & 11
 To calculate pi in 10kb windows we use a custom function (written by Jim Whiting)
 pool_pi.R
 
@@ -80,18 +80,18 @@ Z_pi_PCA_analysis.R
 
 ## Natural WGS data analysis
 ### R script for LD analysis:
-### LDheatmap package can be found here: https://cran.r-project.org/web/packages/LDheatmap/index.html
-### This script creates figure components for Figure 4a & e, and Supplementary Figure 15
+##### LDheatmap package can be found here: https://cran.r-project.org/web/packages/LDheatmap/index.html
+#### This script creates figure components for Figure 4a & e, and Supplementary Figure 15
 LD_heatmap.R
 
 ### R script for Lostruct analysis:
-### Lostruct can be found here: https://github.com/petrelharp/local_pca
-### This script creates figure components for Figure 4b & f, and Supplementary Figure 21
+##### Lostruct can be found here: https://github.com/petrelharp/local_pca
+#### This script creates figure components for Figure 4b & f, and Supplementary Figure 21
 lostruct_localPCA.R
 
 ### R script for perfoming popuation genetics stats using PopGenome:
-### PoopGenome can be found here: https://cran.r-project.org/web/packages/PopGenome/index.html
-### This script creates figure components for Figure 4c,g,d & h
+##### PoopGenome can be found here: https://cran.r-project.org/web/packages/PopGenome/index.html
+#### This script creates figure components for Figure 4c,g,d & h
 popgenome_nat_data.R
 
 
