@@ -62,7 +62,7 @@ To calculate pi in 10kb windows we use a custom function (written by Jim Whiting
 pool_pi.R
 
 To run the function and create the figures:
-
+Z_pi_PCA_analysis.R
 
 
 
