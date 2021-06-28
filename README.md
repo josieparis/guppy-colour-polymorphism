@@ -94,8 +94,9 @@ lostruct_localPCA.R
 #### This script creates figure components for Figure 4c,g,d & h
 popgenome_nat_data.R
 
+### Scripts for creating a genotype plot and haplotype plot as per Figure 5 can be found here:
+https://github.com/josieparis/genotype_plot
 
-
-
-
+### Scripts for creating inter-chrom LD can be found here:
+https://github.com/josieparis/interchromLD
 
