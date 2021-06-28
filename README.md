@@ -48,22 +48,22 @@ Poolfstat is available here: https://cran.r-project.org/web/packages/poolfstat/i
 Script to calculate pairwise FST and allele freqs using poolfstat:
 poolfstat_FST_AFs.R
 
-## R script for perfoming Z_FST_PCA analysis and figures:
+### R script for perfoming Z_FST_PCA analysis and figures:
 #### This script also creates figure components for Figure 2a and d and Supplementary Figures 4,6 and 8
 Z_FST_PCA_analysis.R
 
-## R script for polarising / folding AFs analysis and figures:
+### R script for polarising / folding AFs analysis and figures:
 #### This script also creates figure components for Figure 2b and e
 polarise_plot_AFs.R
 
-## R script for change point detection analysis:
+### R script for change point detection analysis:
 CPD_analysis.R
 
-## R script for pairwise FST:
+### R script for pairwise FST:
 #### This script also creates figure components for Supplementary Figures 5 and 7
 raw_pairwise_fst.R
 
-## R script for performing Z_pi_PCA analysis and figures:
+### R script for performing Z_pi_PCA analysis and figures:
 ### This script also creates figure components for Supplementary Figures 9 & 11
 To calculate pi in 10kb windows we use a custom function (written by Jim Whiting)
 pool_pi.R
