@@ -79,7 +79,15 @@ To run the function and create the figures:
 Z_pi_PCA_analysis.R
 
 ## Natural WGS data analysis
+### R script for LD analysis:
+### LDheatmap package can be found here: https://cran.r-project.org/web/packages/LDheatmap/index.html
+### This script creates figure components for Figure 4a & e, and Supplementary Figure 15
+LD_heatmap.R
 
+### R script for Lostruct analysis:
+### Lostruct can be found here: https://github.com/petrelharp/local_pca
+### This script creates figure components for Figure 4b & f, and Supplementary Figure 21
+LD_heatmap.R
 
 
 
