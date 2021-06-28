@@ -32,6 +32,7 @@ Publication with example data can be found here on bioRxiv: doi: https://doi.org
 #### This script also creates the components for Supplementary Figure 3
 03_phenotype_perm.R
 
+## Genomic data analysis
 ## LG12 coordinate liftover
 The LG12 coordinates were lifted over from the genome available in Fraser et al 2020 GBE (https://doi.org/10.1093/gbe/evaa187) to add additional contigs placed by Deborah Charlesworth's genetic maps:
 
@@ -42,19 +43,25 @@ The updates to the files are run in an R script (and bash to sort the vcf files 
 
 chr12_liftover.R
 
-## Poolfstat to calculate FST and allele frequencies:
+## Iso-Y Pool-seq data analysis
+
+### Poolfstat to calculate FST and allele frequencies:
 Poolfstat is available here: https://cran.r-project.org/web/packages/poolfstat/index.html 
 
 Script to calculate pairwise FST and allele freqs using poolfstat:
 poolfstat_FST_AFs.R
 
 ### R script for perfoming Z_FST_PCA analysis and figures:
-#### This script also creates figure components for Figure 2a and d and Supplementary Figures 4,6 and 8
+#### This script also creates figure components for Figure 2a & d, and Supplementary Figures 4,6 and 8
 Z_FST_PCA_analysis.R
 
 ### R script for polarising / folding AFs analysis and figures:
 #### This script also creates figure components for Figure 2b and e
 polarise_plot_AFs.R
+
+### R script for polarising and plotting density of AFs:
+#### This script also creates figure components for Figure 3, and Supplementary Figures 12, 13 & 14
+polarised_AF_densities.R
 
 ### R script for change point detection analysis:
 CPD_analysis.R
@@ -71,6 +78,7 @@ pool_pi.R
 To run the function and create the figures:
 Z_pi_PCA_analysis.R
 
+## Natural WGS data analysis
 
 
 
