@@ -87,7 +87,13 @@ LD_heatmap.R
 ### R script for Lostruct analysis:
 ### Lostruct can be found here: https://github.com/petrelharp/local_pca
 ### This script creates figure components for Figure 4b & f, and Supplementary Figure 21
-LD_heatmap.R
+lostruct_localPCA.R
+
+### R script for perfoming popuation genetics stats using PopGenome:
+### PoopGenome can be found here: https://cran.r-project.org/web/packages/PopGenome/index.html
+### This script creates figure components for Figure 4c,g,d & h
+popgenome_nat_data.R
+
 
 
 
