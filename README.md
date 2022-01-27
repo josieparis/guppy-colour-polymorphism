@@ -103,3 +103,6 @@ https://github.com/josieparis/genotype_plot
 ### R Script for performing GO enrichment and KEGG mapping:
 GO_KEGG_analysis_LG1.R
 
+## Interchrom LD can be found in the file:
+interchromLD
+
