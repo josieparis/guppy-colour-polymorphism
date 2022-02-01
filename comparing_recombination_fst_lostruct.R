@@ -3,89 +3,12 @@ rm(list=ls()) #clears all variables
 objects() # clear all objects
 graphics.off() #close all figures
 
-setwd("~/Dropbox/Sussex_Guppies/Analyses/pool-seq/recomb_fst_correlations/")
+setwd("~/<path>/recomb_fst_correlations/")
 
-# Analysis of poolseq AFs
+# Libs
 lib <- c("data.table","ggplot2","vcfR","tidyverse","ggridges","viridis","pbmcapply")
 sapply(lib,library,character.only=T)
 
-# # Read in poolvcf 
-# pool_vcf <- read.vcfR("~/Exeter/VCFs/poolseq_variant_filtered.vcf.gz")
-
-# # Go through each chromosome and build up allele frequencies...
-# ADtoAF <- function(AD_vector,haploid_N=FALSE){
-#   
-#   af_dd <- data.frame(AD_vector) %>% separate("AD_vector",sep=",",into=c("ref","alt"))
-#   af_dd$ref <- as.integer(af_dd$ref)
-#   af_dd$alt <- as.integer(af_dd$alt)
-#   af_dd$AF <- af_dd$ref / rowSums(af_dd)
-#   
-#   if(haploid_N){
-#     return(rowSums(af_dd[,c("ref","alt")]))
-#   } else {
-#     return(af_dd$AF)
-#   }
-# }
-# 
-# if(!(file.exists("~/Exeter/josie_poolseq/outputs/all_AF_change.rds"))){
-#   chr_AFs <- lapply(paste0("chr",1:23),function(x){
-#     print(x)
-#     
-#     # Subset chrom and read it in
-#     # vcf_tempfile <- tempfile(pattern = "gt_plot", fileext = '.vcf')
-#     # on.exit({ unlink(vcf_tempfile) })  
-#     # system(paste0("bcftools view -r ",x," ~/Exeter/VCFs/poolseq_variant_filtered.vcf.gz > ",vcf_tempfile))
-#     
-#     # Fetch the genotypes
-#     pool_vcf <- read.vcfR(paste0("~/Exeter/VCFs/poolseq_variant_filtered_",x,".vcf.gz"))
-#     chr_geno <- extract.gt(pool_vcf[pool_vcf@fix[,1] == x,],element = "AD")
-#     
-#     # Convert to AF
-#     chr_AFs <- apply(chr_geno,2,ADtoAF)
-#     # chr_haploids <-  apply(chr_geno,2,ADtoAF,haploid_N=TRUE)
-#     
-#     # Calculate pairwise AF change among all pools...
-#     chr_AF_change <- matrix(ncol=6,nrow=nrow(chr_AFs))
-#     comps_to_make <- combn(colnames(chr_AFs),2)
-#     colnames(chr_AF_change) <- sapply(1:ncol(comps_to_make),function(i) paste0(comps_to_make[1,i],"_",comps_to_make[2,i]))
-#     for(i in 1:ncol(comps_to_make)){
-#       chr_AF_change[,i] <- chr_AFs[,comps_to_make[1,i]] - chr_AFs[,comps_to_make[2,i]]
-#     }
-#     chr_AF_change <- data.frame(chr_AF_change)
-#     chr_AF_change$chr <- x
-#     
-#     # Return
-#     return(list(chr_AF_change,chr_haploids))
-#   })
-#   saveRDS(chr_AFs,"~/Exeter/josie_poolseq/outputs/all_AF_change.rds")
-# } else {
-#   chr_AFs <- readRDS("~/Exeter/josie_poolseq/outputs/all_AF_change.rds")  
-# }
-# 
-# #chr_haploidN <- lapply(chr_AFs,'[[',2)
-# chr_AF_change <- lapply(chr_AFs,'[[',1)
-# 
-# # Condense to a df and plot
-# #chr_haploidN <- data.frame(rbindlist(lapply(chr_haploidN,function(x) return(data.frame(x)))))
-# AF_dd <- data.frame(rbindlist(chr_AF_change))
-# AF_dd_melt <- melt(AF_dd)
-# colnames(AF_dd_melt) <- c("chr","comparison","AF_change")
-# 
-# # Plot ridges...
-# AF_dd_melt$chr_F <- factor(AF_dd_melt$chr,levels = paste0("chr",23:1))
-# ggplot(AF_dd_melt,aes(x=abs(AF_change),y=chr_F))+
-#   stat_density_ridges()+
-#   facet_wrap(~comparison,nrow=1)
-# 
-# # Now report mean, median and sd for all chroms...
-# AF_dd_melt$AFD <- abs(AF_dd_melt$AF_change)
-# avg_AF <- data.frame(AF_dd_melt %>% group_by(chr,comparison) %>% summarise(mean_AF = mean(AFD,na.rm = T),
-#                                                                            median_AF = median(AFD,na.rm = T),
-#                                                                            sd_AF = sd(AFD,na.rm = T)))
-# 
-# avg_AF$chr_F <- factor(avg_AF$chr,levels=paste0("chr",1:23))
-# ggplot(avg_AF,aes(fill=comparison,x=chr_F,y=median_AF))+
-#   geom_bar(stat = "identity",position="dodge")
 
 # Read in the Fst and show distributions for each chromosome --------------
 all_fst <- data.frame(fread("../poolfstat/outputs/final_pairwise_fst.tsv"))
