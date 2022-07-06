@@ -2,7 +2,9 @@
 
 ### Code, scripts and additional data pertaining to "A large and diverse autosomal haplotype is associated with sex-linked colour polymorphism in the guppy"
 
-### Publication is available on bioRxiv doi: https://doi.org/10.1101/2021.04.08.437888
+### These data relate to the Nature Communications Publication which is available here:
+
+https://www.nature.com/articles/s41467-022-28895-4 
 
 Please contact me at parisjosephine<@>gmail.com with any queries
 
@@ -16,7 +18,8 @@ SNP calling was performed using the pipeline described here: https://github.com/
 
 ## Colour phenotype analysis
 Colormesh can be found here: https://github.com/J0vid/Colormesh
-Publication with example data can be found here on bioRxiv: doi: https://doi.org/10.1101/2020.07.17.205369
+
+Publication with example data is published in https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.7992 
 
 ##### NB these analyses and scripts were performed and written by Mitchel Daniel
 
